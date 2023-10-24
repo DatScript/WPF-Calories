@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calories.App", "Calories.App\Calories.App.csproj", "{EECA8CAD-4EDF-4CB7-81E4-75AD0D2F6DF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calories.Common", "Library\Calories.Common\Calories.Common.csproj", "{2D7EBA67-49C6-4DD6-99C5-1292A9E203D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{A46CB730-594F-445F-9CB5-9F1AE7E3BB77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EECA8CAD-4EDF-4CB7-81E4-75AD0D2F6DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EECA8CAD-4EDF-4CB7-81E4-75AD0D2F6DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EECA8CAD-4EDF-4CB7-81E4-75AD0D2F6DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EECA8CAD-4EDF-4CB7-81E4-75AD0D2F6DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7EBA67-49C6-4DD6-99C5-1292A9E203D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7EBA67-49C6-4DD6-99C5-1292A9E203D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7EBA67-49C6-4DD6-99C5-1292A9E203D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D7EBA67-49C6-4DD6-99C5-1292A9E203D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D7EBA67-49C6-4DD6-99C5-1292A9E203D1} = {A46CB730-594F-445F-9CB5-9F1AE7E3BB77}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11F883D6-BE93-49D8-AEF5-3F0F97A3D6A2}
+	EndGlobalSection
+EndGlobal

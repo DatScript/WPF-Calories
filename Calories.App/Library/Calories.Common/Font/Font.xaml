@@ -1,0 +1,12 @@
+﻿<!--<Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="/Common;component/Font/Font.xaml" />
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+</Application.Resources>-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="SegoeUI">pack://application:,,,/Font/#Segoe UI</FontFamily>
+    <FontFamily x:Key="Roboto">pack://application:,,,/Font/#Roboto</FontFamily>
+    <FontFamily x:Key="Gothic">pack://application:,,,/Resources/Fonts/#NanumGothic</FontFamily>
+</ResourceDictionary>
