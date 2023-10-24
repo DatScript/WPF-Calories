@@ -3,6 +3,8 @@ using log4net;
 using log4net.Repository.Hierarchy;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Syncfusion.SfSkinManager;
+using Syncfusion.Themes.FluentDark.WPF;
 using System.Windows;
 
 namespace Calories.App;
@@ -21,7 +23,14 @@ public partial class App : Application
         {
             ConfigureServices(services);
         }).Build();
-
+        FluentDarkThemeSettings themeSettings = new FluentDarkThemeSettings();
+        themeSettings.BodyFontSize = 16;
+        themeSettings.HeaderFontSize = 18;
+        themeSettings.SubHeaderFontSize = 17;
+        themeSettings.TitleFontSize = 17;
+        themeSettings.SubTitleFontSize = 16;
+        themeSettings.BodyAltFontSize = 15;
+        SfSkinManager.RegisterThemeSettings("FluentDark", themeSettings);
         InitLog();
         log4net.Config.XmlConfigurator.Configure();
         var hierarchy = (Hierarchy)LogManager.GetRepository();
