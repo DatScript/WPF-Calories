@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.10" />
     <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="22.2.8" />
     <PackageReference Include="Syncfusion.Shared.WPF" Version="22.2.8" />
     <PackageReference Include="Syncfusion.Themes.FluentDark.WPF" Version="22.2.8" />

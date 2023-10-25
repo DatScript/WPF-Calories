@@ -1,4 +1,5 @@
-﻿using Calories.App.ViewModels;
+﻿using Calories.App.Models;
+using Calories.App.ViewModels;
 using Syncfusion.UI.Xaml.Grid;
 using Syncfusion.Windows.Shared;
 using System.Collections.ObjectModel;
@@ -31,9 +32,17 @@ public partial class MainWindow : ChromelessWindow
         GridDinner.CellDoubleTapped += GridOnCellDoubleTapped;
         GridDinner.Drop += GridBreakfast_Drop;
 
+        GridDay.CellDoubleTapped += GridDayOnCellDoubleTapped;
+
         //GridNutrients.RowDragDropController.Dropped += RowDragDropController_Dropped;
         //GridNutrients.RowDragDropController.Drop += RowDragDropController_Drop;
         //GridNutrients.RowDragDropController.DragLeave += RowDragDropController_DragLeave;
+    }
+
+    private void GridDayOnCellDoubleTapped(object? sender, GridCellDoubleTappedEventArgs e)
+    {
+        if (e.Record is not DayDetail dayDetail) return;
+        dayDetail.Clear();
     }
 
     private void GridOnCellDoubleTapped(object? sender, GridCellDoubleTappedEventArgs e)
@@ -42,7 +51,7 @@ public partial class MainWindow : ChromelessWindow
         var itemsSource = (sender as SfDataGrid)?.ItemsSource as ObservableCollection<Models.Nutrient>;
         if (itemsSource == null) return;
         itemsSource.Remove(nutrient);
-        ViewModel.Calculate();
+        ViewModel.DayDetail?.Calculate();
     }
 
     private void GridBreakfast_Drop(object sender, System.Windows.DragEventArgs e)
@@ -50,7 +59,7 @@ public partial class MainWindow : ChromelessWindow
         if (e.Data.GetData("Records") is not ObservableCollection<object> records) return;
         if (records.FirstOrDefault() is not Models.Nutrient first) return;
         ((sender as SfDataGrid)?.ItemsSource as ObservableCollection<Models.Nutrient>)?.Add(first);
-        ViewModel.Calculate();
+        ViewModel.DayDetail?.Calculate();
     }
 
     private void RowDragDropController_Drop(object? sender, GridRowDropEventArgs e)
