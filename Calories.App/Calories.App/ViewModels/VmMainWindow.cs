@@ -1,4 +1,4 @@
-using Calories.App.Models;
+﻿using Calories.App.Models;
 using Calories.App.Properties;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -85,18 +85,22 @@ public partial class VmMainWindow : ObservableObject
         if (!response.IsSuccessStatusCode) return nutrients;
         var csvData = await response.Content.ReadAsStringAsync();
         var lines = csvData.Split('\n', StringSplitOptions.RemoveEmptyEntries);
-
+        //Thịt ba chỉ,100,gram,16.5,0,21.5,https://cdn-icons-png.flaticon.com/512/1582/1582214.png
+        //Thịt nạc heo,100,gram,19,0,7,https://cdn-icons-png.flaticon.com/512/3390/3390629.png
+        //Trứng gà,1,quả,6.3,6,5.3,https://cdn-icons-png.flaticon.com/512/2168/2168010.png
         foreach (var line in lines)
         {
             var values = line.Split(',');
 
-            if (values.Length != 5) continue;
+            if (values.Length != 7) continue;
             var nutrient = new Nutrient(values[0])
             {
-                Protein = float.Parse(values[1]),
-                Carbohydrate = float.Parse(values[2]),
-                Fat = float.Parse(values[3]),
-                ImageUrl = values[4]
+                Amount = float.Parse(values[1]),
+                Unit = values[2],
+                Protein = float.Parse(values[3]),
+                Carbohydrate = float.Parse(values[4]),
+                Fat = float.Parse(values[5]),
+                ImageUrl = values[6]
             };
             nutrients.Add(nutrient);
         }

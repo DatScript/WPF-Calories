@@ -10,14 +10,10 @@
 
   <ItemGroup>
     <None Remove="Resources\Icons\icon.ico" />
-    <None Remove="Resources\SVG\CWPF.svg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\Icons\icon.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\SVG\CWPF.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

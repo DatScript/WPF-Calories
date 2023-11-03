@@ -5,7 +5,8 @@ public class Nutrient
     public float Protein { get; set; }
     public float Carbohydrate { get; set; }
     public float Fat { get; set; }
-    public float Amount { get; set; } = 1;
+    public float Amount { get; set; }
+    public string? Unit { get; set; }
     public string? ImageUrl { get; set; }
     public string? Meal { get; set; }
 
